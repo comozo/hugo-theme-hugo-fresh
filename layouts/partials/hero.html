@@ -1,9 +1,12 @@
 {{- $hero := .Site.Params.hero }}
 {{- $tiles    := index $hero "tiles" }}
-<section class="hero is-medium is-default is-bold">
+<section class="hero is-small is-default is-bold">
   <!-- {{ partial "navbar.html" . }} -->
   <!-- {{ partial "navbar-clone.html" . }} -->
   {{ partial "hero-body.html" . }}
+  {{ partial "hero-footer.html" . }}
+</section>
+<section class="section section-feature-grey is-small" id="section1">
     <div class="content-wrapper">
       <div class="columns">
         {{- range $tiles }}
@@ -26,5 +29,4 @@
         {{- end }}
       </div>
     </div>
-  {{ partial "hero-footer.html" . }}
 </section>
