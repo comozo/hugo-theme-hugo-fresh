@@ -4,6 +4,7 @@
 {{- $buttonText := index $hero "buttontext" }}
 {{- $buttonLink := index $hero "buttonlink" }}
 {{- $image      := index $hero "image" }}
+{{- $socialMedia := index $hero "socialmedia" }}
 <div class="hero-body">
   <div class="container">
     <div class="columns is-vcentered">
@@ -30,3 +31,21 @@
     </div>
   </div>
 </div>
+<section class="section section-feature-grey is-small" id="section1">
+    <div class="content-wrapper">
+      <div class="columns">
+        {{- range $socialMedia}}
+        <div class="column is-half">
+          <div class="feature-card has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
+            <div class="card-icon">
+                <img src="{{ printf "images/illustrations/icons/%s.svg" .icon | relURL }}">
+            </div>
+            <div class="card-action">
+              <a href="{{ .link}} " class="button btn-align-md accent-btn raised">{{ .call_to_action }}</a>
+            </div>
+          </div>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+</section>
