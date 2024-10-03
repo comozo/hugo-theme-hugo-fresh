@@ -24,7 +24,7 @@
         </p>
       </div>
       <div class="column is-5 is-offset-1">
-        <figure class="image is-4by3">
+        <figure class="image is-1by1">
           <img src="{{ printf "images/%s" $image | relURL }}" alt="Description">
         </figure>
       </div>
@@ -35,7 +35,7 @@
     <div class="content-wrapper">
       <div class="columns">
         {{- range $socialMedia}}
-        <div class="column is-half">
+        <div class="column is-one-quarter">
           <div class="feature-card has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
             <div class="card-icon">
                 <img src="{{ printf "images/illustrations/icons/%s.svg" .icon | relURL }}">
